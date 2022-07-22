@@ -1,7 +1,7 @@
 Git Hub Search Bar, Task 1.
 
 
-### The The Task
+### The Task
 To design a search engine that calls the git hub search API, we should be able to choose to search between repositories and users.
 
 ### Requirements:
