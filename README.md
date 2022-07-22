@@ -11,7 +11,7 @@ To design a search engine that calls the git hub search API, we should be able t
 4. Redux for state management.
 5. Prevent excessive API calls
 
-### The Approach.
+### High Level Approach.
 Functional componenets have been prioritized over class componenets a they allow for more flexibility via allowing react hooks introduced in react 16.8+. Other than that react-redux useSelector and useDispatch have been utilized as these have less boiler plate setup than mapStatetoProps and mapDispatchtoProps.
 
 Whenever the API is called, the results are stored via the resultsReducer, these can be accesed by the content.js componenet which handles displaying the contents. Other properites like inputted text, and drop down selection are also stored via their respective reducers, in order for inter-component integration and data sharing. For example, whenever the drop menu seleciton is changed the screen has to be cleared and new results of the same search term has to be displayed. This required drop menu to access the saved inputText otherwise it won't be able to make the new API call.
