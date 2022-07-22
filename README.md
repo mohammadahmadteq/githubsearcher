@@ -9,7 +9,8 @@ To design a search engine that calls the git hub search API, we should be able t
 2. antDesign for templates.
 3. Redux Persist for caching.
 4. Redux for state management.
-5. Prevent excessive API calls
+5. Prevent excessive API calls.
+6. Responsive design to readjust the layourt at smaller screen sizes of < 768px
 
 ### High Level Approach.
 Functional componenets have been prioritized over class componenets a they allow for more flexibility via allowing react hooks introduced in react 16.8+. Other than that react-redux useSelector and useDispatch have been utilized as these have less boiler plate setup than mapStatetoProps and mapDispatchtoProps.
