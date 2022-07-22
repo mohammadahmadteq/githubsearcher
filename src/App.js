@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Search from "./Components/searchBox";
+import DropMenu from "./Components/dropDown";
+import Content from "./Components/content";
+import React from "react";
+//import { useSelector } from "react-redux";
+//import SearchingGitHub from './SearchComponent';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main">
+        <h1 className="logos">
+          Github Searcher{" "}
+          <p className="subheading">Search users or repositories below</p>
+        </h1>
+        <div className="search-box">
+          {" "}
+          <Search />{" "}
+        </div>
+        <div className="drop-down">
+          <DropMenu />
+        </div>
+      </div>
+      {<Content />}
+    </>
   );
 }
 
