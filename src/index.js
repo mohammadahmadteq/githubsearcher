@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { hot } from "react-hot-loader/root";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { store, persistor } from "./Redux/configureStore";
 import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -13,7 +13,9 @@ ReactDOM.render(
   <ReduxProvider store={store}>
     <PersistGate persistor={persistor}>
       <Router>
-        <ReactApp />
+        <Switch>
+          <Route path="/" exact component={ReactApp} />
+        </Switch>
       </Router>
     </PersistGate>
   </ReduxProvider>,
