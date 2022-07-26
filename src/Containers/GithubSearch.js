@@ -1,15 +1,15 @@
-import SearchBox from "./Components/searchBox";
-import DropMenu from "./Components/dropDown";
-import Content from "./Components/content";
+import SearchBox from "../Components/searchBox";
+import DropMenu from "../Components/dropDown";
+import Content from "../Components/content";
 import React from "react";
-import useSearch from "./Components/Containers/searchContainer";
-import useDropDown from "./Components/Containers/dropDownContainer";
-import useContent from "./Components/Containers/contentContainer";
+import useSearch from "./searchContainer";
+import useDropDown from "./dropDownContainer";
+import useContent from "./contentContainer";
 
 //import { useSelector } from "react-redux";
 //import SearchingGitHub from './SearchComponent';
 
-function App() {
+function GithubSearch() {
   const searchData = useSearch();
   const [type, handleMenuClick] = useDropDown();
   const [results, isLoading, lastRefCalllback] = useContent();
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default GithubSearch;

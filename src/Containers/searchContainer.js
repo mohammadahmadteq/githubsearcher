@@ -1,8 +1,8 @@
-import * as ActionCreators from "../../Redux/Actions/index";
+import * as ActionCreators from "../Redux/Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { useCallback } from "react";
-import { useData } from "./useData";
+import { useData } from "../Services/useData";
 import { debounce } from "lodash";
 
 function useSearch() {
