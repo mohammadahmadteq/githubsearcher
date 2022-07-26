@@ -1,8 +1,8 @@
 import { message } from "antd";
-import * as ActionCreators from "../../Redux/Actions/index";
+import * as ActionCreators from "../Redux/Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
-import { useData } from "./useData";
+import { useData } from "../Services/useData";
 
 function useDropDown() {
   //Selectors required for operations.

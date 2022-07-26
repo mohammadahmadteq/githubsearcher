@@ -1,20 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import GithubSearch from "./Containers/GithubSearch";
 import { hot } from "react-hot-loader/root";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { store, persistor } from "./Redux/configureStore";
 import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-const ReactApp = process.env.NODE_ENV === "development" ? hot(App) : App;
+const GithubSearchHot =
+  process.env.NODE_ENV === "development" ? hot(GithubSearch) : GithubSearch;
 
 ReactDOM.render(
   <ReduxProvider store={store}>
     <PersistGate persistor={persistor}>
       <Router>
         <Switch>
-          <Route path="/" exact component={ReactApp} />
+          <Route path="/" exact component={GithubSearchHot} />
         </Switch>
       </Router>
     </PersistGate>
