@@ -1,10 +1,17 @@
-import Search from "./Components/searchBox";
+import SearchBox from "./Components/searchBox";
 import DropMenu from "./Components/dropDown";
 import Content from "./Components/content";
 import React from "react";
+import useSearch from "./Components/Containers/searchContainer";
+import useDropDown from "./Components/Containers/dropDownContainer";
+import useContent from "./Components/Containers/contentContainer";
 //import { useSelector } from "react-redux";
 //import SearchingGitHub from './SearchComponent';
+
 function App() {
+  const searchData = useSearch();
+  const [type, handleMenuClick] = useDropDown();
+  const [results, isLoading, lastRefCalllback] = useContent();
   return (
     <>
       <div className="main">
@@ -14,13 +21,20 @@ function App() {
         </h1>
         <div className="search-box">
           {" "}
-          <Search />{" "}
+          <SearchBox onChange={searchData} />{" "}
         </div>
         <div className="drop-down">
-          <DropMenu />
+          <DropMenu type={type} handleMenuClick={handleMenuClick} />
         </div>
       </div>
-      {<Content />}
+      {
+        <Content
+          results={results}
+          type={type}
+          isLoading={isLoading}
+          lastRefCalllback={lastRefCalllback}
+        />
+      }
     </>
   );
 }
