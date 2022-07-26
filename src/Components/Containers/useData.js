@@ -1,5 +1,5 @@
 import React from "react";
-import * as ActionCreators from "../Redux/Actions/index";
+import * as ActionCreators from "../../Redux/Actions/index";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import getResults from "./getSearchResults";
