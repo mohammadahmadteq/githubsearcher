@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRef, useCallback } from "react";
 import { useSelector } from "react-redux";
-import { useData } from "../Services/useData";
+import { useData } from "../../Services/useData";
 
 let PageNum = 2;
 function useContent() {
